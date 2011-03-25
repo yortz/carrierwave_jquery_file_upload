@@ -1,0 +1,108 @@
+GIT
+  remote: git://github.com/jnicklas/carrierwave.git
+  revision: 4247285b33897d7b1f528ac8fddbb0e15bb9de97
+  specs:
+    carrierwave (0.5.3)
+      activesupport (~> 3.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.4)
+      actionpack (= 3.0.4)
+      mail (~> 2.2.15)
+    actionpack (3.0.4)
+      activemodel (= 3.0.4)
+      activesupport (= 3.0.4)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.13)
+      rack-test (~> 0.5.7)
+      tzinfo (~> 0.3.23)
+    activemodel (3.0.4)
+      activesupport (= 3.0.4)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
+    activerecord (3.0.4)
+      activemodel (= 3.0.4)
+      activesupport (= 3.0.4)
+      arel (~> 2.0.2)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.4)
+      activemodel (= 3.0.4)
+      activesupport (= 3.0.4)
+    activesupport (3.0.4)
+    arel (2.0.9)
+    builder (2.1.2)
+    client_side_validations (3.0.0.rc.1)
+      activesupport (~> 3.0.0)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    excon (0.5.7)
+    fog (0.7.1)
+      builder
+      excon (>= 0.5.7)
+      formatador (>= 0.1.2)
+      json
+      mime-types
+      net-ssh (>= 2.0.23)
+      nokogiri (>= 1.4.4)
+      ruby-hmac
+    formatador (0.1.2)
+    i18n (0.5.0)
+    jquery-rails (0.2.7)
+      rails (~> 3.0)
+      thor (~> 0.14.4)
+    json (1.5.1)
+    mail (2.2.15)
+      activesupport (>= 2.3.6)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    mini_magick (2.0.2)
+      subexec (~> 0.0.4)
+    mysql2 (0.2.6)
+    net-ssh (2.1.3)
+    nokogiri (1.4.4)
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rack-mount (0.6.13)
+      rack (>= 1.0.0)
+    rack-test (0.5.7)
+      rack (>= 1.0)
+    rails (3.0.4)
+      actionmailer (= 3.0.4)
+      actionpack (= 3.0.4)
+      activerecord (= 3.0.4)
+      activeresource (= 3.0.4)
+      activesupport (= 3.0.4)
+      bundler (~> 1.0)
+      railties (= 3.0.4)
+    railties (3.0.4)
+      actionpack (= 3.0.4)
+      activesupport (= 3.0.4)
+      rake (>= 0.8.7)
+      thor (~> 0.14.4)
+    rake (0.8.7)
+    ruby-hmac (0.4.0)
+    subexec (0.0.4)
+    thor (0.14.6)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.24)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  carrierwave!
+  client_side_validations
+  fog
+  jquery-rails (>= 0.2.6)
+  mini_magick
+  mysql2
+  rails (= 3.0.4)

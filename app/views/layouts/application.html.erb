@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JqueryCarrierwave</title>
+  <%= stylesheet_link_tag :all, "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" %>
+  <%= javascript_include_tag :defaults,
+                             "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js",
+                             "jquery.fileupload.js",
+                             "jquery.fileupload-ui.js"%>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
