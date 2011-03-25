@@ -2,7 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(function () {
-    $('#new_picture').fileUploadUI({
+    $('#file_upload').fileUploadUI({
         uploadTable: $('#files'),
         downloadTable: $('#files'),
         dropZone: $('#file_upload_container'),
