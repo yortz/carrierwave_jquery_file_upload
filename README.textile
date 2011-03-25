@@ -64,7 +64,14 @@ App default for processing images is MiniMagick; if you want to use another libr
   </code>
 </pre>
 
+h1. References:
+
+* "carrierwave":https://github.com/jnicklas/carrierwave
+
+* "Jquery-File-Upload":https://github.com/blueimp/jQuery-File-Upload
+
 h1. TODO:
 
 * testing
 * better validation handling
+* improve update of image on edit
