@@ -29,7 +29,9 @@ Since this app stores files to amazon S3 you will need an "Amazon S3":http://aws
   </code>
 </pre>
 
-Amazon S3 support is made possibile by "Fog":https://github.com/geemus/fog ; you will need to tell carrierwave to use Amazons S3 by creating an initializer and providing your Amazon S3 authentication details:
+Amazon S3 support is made possibile by "Fog":https://github.com/geemus/fog 
+
+You will need to tell carrierwave to use Amazons S3 by creating an initializer and providing your Amazon S3 authentication details:
 
 <pre>
   <code>
@@ -52,7 +54,7 @@ Amazon S3 support is made possibile by "Fog":https://github.com/geemus/fog ; you
 
 h1. Image Processing:
 
-App default for processing images is MiniMagick; if you want to use another library, just edit the Gemfile and modify the uploader accordingly to your choice:
+MiniMagick is app default for processing images; if you want to use another library, just edit the Gemfile and modify the uploader to reflect your choice:
 
 <pre>
   <code>
