@@ -9,7 +9,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: jquery_carrierwave_development
+  database: c_j_f_u_development
   pool: 5
   username: root
   password:
@@ -22,7 +22,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: jquery_carrierwave_test
+  database: c_j_f_u_test
   pool: 5
   username: root
   password:
@@ -32,7 +32,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: jquery_carrierwave_production
+  database: c_j_f_u_production
   pool: 5
   username: root
   password:
