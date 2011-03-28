@@ -1,0 +1,10 @@
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+fieldset {width:22%;margin-bottom:10px;}

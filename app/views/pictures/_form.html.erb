@@ -19,11 +19,18 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  
+
   <% if @picture.file? %>
-  <p>
-    <%= image_tag(@picture.file_url(:medium)) %>
-  </p>
+    <fieldset>
+      <legend>Picture</legend>
+      <p>
+        <%= image_tag(@picture.file_url(:medium)) %>
+        <% unless @picture.new_record? %>
+          <%= f.check_box :remove_file %>
+          <%= f.label :remove_file, "remove file" %>
+        <% end %>
+      </p>
+    </fieldset>
   <% end %>
 
   <div id="file_upload_container">
