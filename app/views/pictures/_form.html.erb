@@ -34,10 +34,13 @@
   <% end %>
 
   <div id="file_upload_container">
+    <%= f.label :file%>
     <%= f.file_field :file %>
-    <button>Upload</button>
-    <div>Upload files</div>
+    <!-- <button>Upload</button>
+    <div>Start uploads</div> -->
   </div>
+  
+  <%= f.submit "Create" %>
 <% end %>
 
 <table id="files"></table>

@@ -10,6 +10,8 @@ gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git'
 gem 'fog'
 gem 'mini_magick'
 gem 'jquery-rails', '>= 0.2.6'
+gem 'delayed_job'
+gem 'carrierwave_backgrounder', :path => '/Users/yortz/projects/carrierwave_backgrounder' #:git => 'git://github.com/yortz/carrierwave_backgrounder.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'

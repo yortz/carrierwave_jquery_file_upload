@@ -5,6 +5,11 @@ GIT
     carrierwave (0.5.3)
       activesupport (~> 3.0)
 
+PATH
+  remote: /Users/yortz/projects/carrierwave_backgrounder
+  specs:
+    carrierwave_backgrounder (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -37,6 +42,10 @@ GEM
     activesupport (3.0.4)
     arel (2.0.9)
     builder (2.1.2)
+    daemons (1.1.0)
+    delayed_job (2.1.4)
+      activesupport (~> 3.0)
+      daemons
     erubis (2.6.6)
       abstract (>= 1.0.0)
     excon (0.5.7)
@@ -98,6 +107,8 @@ PLATFORMS
 
 DEPENDENCIES
   carrierwave!
+  carrierwave_backgrounder!
+  delayed_job
   fog
   jquery-rails (>= 0.2.6)
   mini_magick
