@@ -16,6 +16,20 @@ $(function () {
         },
         buildDownloadRow: function (file) {
             return $('<tr><td><img alt="Photo" width="80" height="80" src="' + file.pic_path + '">' + file.name + '<\/td><\/tr>');
+        },
+        beforeSend: function (event, files, index, xhr, handler, callBack) {
+          var title = $("#picture_title").val();
+          var description = $("#picture_description").val();
+          if (title == "" || description == "") {
+            clientSideValidations.validateForm("#file_upload");
+            handler.removeNode(handler.uploadRow);
+          }
+          else {
+            callBack();
+          }
+        },
+        onComplete: function () {
+          $("#file_upload_container").hide();
         }
     });
 });
