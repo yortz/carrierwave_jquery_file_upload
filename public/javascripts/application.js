@@ -30,6 +30,7 @@ $(function () {
         },
         onComplete: function () {
           $("#file_upload_container").hide();
+          $("#picture_placeholder").hide();
         }
     });
 });

@@ -20,11 +20,13 @@
     <%= f.text_area :description %>
   </div>
   
-  <% if @picture.file? %>
-  <p>
-    <%= image_tag(@picture.file_url(:medium)) %>
-  </p>
-  <% end %>
+  <div id="picture_placeholder">
+    <% if @picture.file? %>
+    <p>
+      <%= image_tag(@picture.file_url(:medium)) %>
+    </p>
+    <% end %>
+  </div>
 
   <div id="file_upload_container">
     <%= f.file_field :file %>
