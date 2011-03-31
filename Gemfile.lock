@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/jnicklas/carrierwave.git
-  revision: 4247285b33897d7b1f528ac8fddbb0e15bb9de97
+  revision: 5a1ba78b569e7274501362f726c41ee031eefcd5
+  branch: remove_previous_files_2
   specs:
-    carrierwave (0.5.3)
+    carrierwave (0.5.2)
       activesupport (~> 3.0)
 
 GEM

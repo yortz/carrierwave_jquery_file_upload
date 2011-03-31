@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.4'
 
 gem 'mysql2'
-gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git'
+gem 'carrierwave', :git => 'git://github.com/jnicklas/carrierwave.git', :branch => 'remove_previous_files_2'
 gem 'fog'
 gem 'mini_magick'
 gem 'jquery-rails', '>= 0.2.6'
