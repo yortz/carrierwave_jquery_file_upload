@@ -75,5 +75,4 @@ h1. References:
 h1. TODO:
 
 * testing
-* better validation handling
-* improve update of image on edit
+
