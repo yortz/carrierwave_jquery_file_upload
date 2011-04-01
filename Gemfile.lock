@@ -1,14 +1,10 @@
 GIT
   remote: git://github.com/jnicklas/carrierwave.git
-  revision: 4247285b33897d7b1f528ac8fddbb0e15bb9de97
+  revision: 5a1ba78b569e7274501362f726c41ee031eefcd5
+  branch: remove_previous_files_2
   specs:
-    carrierwave (0.5.3)
+    carrierwave (0.5.2)
       activesupport (~> 3.0)
-
-PATH
-  remote: /Users/yortz/projects/carrierwave_backgrounder
-  specs:
-    carrierwave_backgrounder (0.0.1)
 
 GEM
   remote: http://rubygems.org/
@@ -42,13 +38,16 @@ GEM
     activesupport (3.0.4)
     arel (2.0.9)
     builder (2.1.2)
-    daemons (1.1.0)
+    carrierwave_backgrounder (0.0.2)
+    client_side_validations (3.0.0)
+      activesupport (~> 3.0.0)
+    daemons (1.1.2)
     delayed_job (2.1.4)
       activesupport (~> 3.0)
       daemons
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    excon (0.5.7)
+    excon (0.6.0)
     fog (0.7.1)
       builder
       excon (>= 0.5.7)
@@ -70,14 +69,14 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    mini_magick (2.0.2)
+    mini_magick (3.2)
       subexec (~> 0.0.4)
-    mysql2 (0.2.6)
+    mysql2 (0.2.7)
     net-ssh (2.1.3)
     nokogiri (1.4.4)
     polyglot (0.3.1)
-    rack (1.2.1)
-    rack-mount (0.6.13)
+    rack (1.2.2)
+    rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
       rack (>= 1.0)
@@ -100,14 +99,15 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.24)
+    tzinfo (0.3.25)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   carrierwave!
-  carrierwave_backgrounder!
+  carrierwave_backgrounder
+  client_side_validations (~> 3.0.0)
   delayed_job
   fog
   jquery-rails (>= 0.2.6)
