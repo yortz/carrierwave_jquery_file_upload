@@ -10,6 +10,6 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'client_side_validations', '~> 3.0.0'
 
 gem 'delayed_job'
-gem 'carrierwave_backgrounder' #:path => '/Users/yortz/projects/carrierwave_backgrounder'
+gem 'carrierwave_backgrounder'
 
 

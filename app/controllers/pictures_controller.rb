@@ -46,11 +46,11 @@ class PicturesController < ApplicationController
       if @picture.save
         format.html { redirect_to(@picture, :notice => 'Picture was successfully created.') }
         format.xml  { render :xml => @picture, :status => :created, :location => @picture }
-        # format.json {  render :json => { :pic_path => @picture.file.url(:thumb).to_s, :name => @picture.file.filename }, :content_type => 'text/html' }
+        format.json {  render :json => { :pic_path => @picture.file.url(:thumb).to_s, :name => @picture.file.filename }, :content_type => 'text/html' }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @picture.errors, :status => :unprocessable_entity }
-        # format.json { render :json => { :result => 'error'}, :content_type => 'text/html' }
+        format.json { render :json => { :result => 'error'}, :content_type => 'text/html' }
       end
     end
   end
