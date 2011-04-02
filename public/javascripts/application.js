@@ -25,11 +25,18 @@ $(function () {
             handler.removeNode(handler.uploadRow);
           }
           else {
+            if (files[index].size > 2000000) {
+              handler.uploadRow.find('.file_upload_progress').html('FILE TOO BIG!');
+              setTimeout(function () {
+                handler.removeNode(handler.uploadRow);
+              }, 20000);
+              return;
+            }
             callBack();
           }
         },
         onComplete: function () {
-          $("#file_upload_container").hide();
+          $("#file_upload_container").remove();
           $("#picture_placeholder").hide();
         }
     });
