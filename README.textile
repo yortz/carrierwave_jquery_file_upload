@@ -2,7 +2,19 @@ h1. Description:
 
 Sample app using Rails 3, "carrierwave":https://github.com/jnicklas/carrierwave and "jquery-file-upload":https://github.com/blueimp/jQuery-File-Upload to upload and store files on Amazon S3.
 
-The "backgrounder":https://github.com/yortz/carrierwave_jquery_file_upload/tree/backgrounder branch delays the entire upload process to S3 thanks to "carrierwave backgrounder":https://github.com/lardawge/carrierwave_backgrounder and "delayed job":https://github.com/collectiveidea/delayed_job.
+This branch delays the entire upload process to S3 thanks to "carrierwave backgrounder":https://github.com/lardawge/carrierwave_backgrounder and "delayed job":https://github.com/collectiveidea/delayed_job.
+
+h1. How to:
+
+First Install, then simply run dj:
+
+<pre>
+  <code>
+    $: rake jobs:work
+  </code>
+</pre>
+
+The worker will pick up each job and do the upload and versioning of the image. A temporary file will be stored in "public/uploads/tmp/#{cache_dir}". This dir will be deleted after the worker will successfully terminate. For further information please check the "carrierwave backgrounder":https://github.com/lardawge/carrierwave_backgrounder gem. Feel free to contribute!
 
 h1. Install:
 
