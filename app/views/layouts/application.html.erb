@@ -5,6 +5,8 @@
   <%= stylesheet_link_tag :all, "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" %>
   <%= javascript_include_tag :defaults,
                              "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js",
+                             "jquery.purr.js",
+                             "best_in_place",
                              "jquery.fileupload.js",
                              "jquery.fileupload-ui.js",
                              "client-side-validations" %>
@@ -12,9 +14,16 @@
 </head>
 <body>
   
-<div id="container">
+  <%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>
+  
+  <ul class="hmenu">
+    <%= render 'devise/menu/login_items' %>
+  </ul>
+  
   <%= yield %>
-</div>
+
 
 </body>
 </html>

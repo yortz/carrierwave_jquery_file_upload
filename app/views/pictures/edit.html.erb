@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+<%= link_to 'Show', [current_user, @picture] %> |
+<%= link_to 'Back', user_pictures_path(current_user) %>

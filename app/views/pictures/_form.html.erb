@@ -1,4 +1,4 @@
-<%= form_for @picture, :html => {:multipart => true, :id => "file_upload"}, :validate => true do |f| %>
+<%= form_for @picture, :html => {:multipart => true, :class => "file_upload"}, :validate => true do |f| %>
   <% if @picture.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area (:description, :rows => 3) %>
+    <%= f.text_area(:description, :rows => 3) %>
   </div>
 
   <div id="picture_placeholder">
@@ -27,12 +27,14 @@
     </p>
     <% end %>
   </div>
-
-  <div id="file_upload_container">
+  
+  <div id="file_upload_container" class="file_upload">
     <%= f.file_field :file %>
     <button>Upload</button>
     <div>Attach Image</div>
   </div>
+  
+  <%= f.hidden_field :file_cache %>
 
 <% end %>
 

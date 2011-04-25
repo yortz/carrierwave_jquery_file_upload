@@ -8,3 +8,13 @@
 }
 
 fieldset {width:22%;margin-bottom:10px;}
+
+ul.hmenu, #uploads ul {
+  list-style: none;	
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li, #uploads ul li {
+  display: inline;  
+}

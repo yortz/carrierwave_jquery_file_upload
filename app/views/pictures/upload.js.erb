@@ -1,0 +1,33 @@
+$(document).ready(function() {
+  pollPictures();
+});
+
+function pollPictures(){
+  $.ajax({
+    url: "<%= list_user_pictures_path(current_user) %>",
+    type: "GET",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data) {
+      $("#uploads").html("<h1>We are uploading your pictures</h1>" +
+                         "<ul id=\"ajax-stats\"></ul>" +
+                         "<ul id=\"uploads_list\"></ul>");
+        console.log("polling");
+        var loadTimeout = setTimeout("pollPictures()", 10000);
+        $.each(data.pictures, function(index, picture) {
+          if (picture.file == undefined){
+              $("#ajax-stats").append("<li id=\"placeholder_" + picture.id + "\">" + '<%= image_tag("spinner3-black.gif", :class => "image_placeholder") %>' + "</li>");
+          }
+          else {
+            if ($("#uploads_list > #picture_" + picture.id).length == 0) { 
+             $("#uploads_list").append("<li " + "id=\"picture_" + picture.id + "\" >" + "<img " + " src=\"" + picture.file + "\" >" + "</li>");
+            }
+          }
+        });
+        if ($("#ajax-stats").children().size() == 0) {
+          console.log("not polling");
+          clearTimeout(loadTimeout);
+        }
+    }
+  });
+};

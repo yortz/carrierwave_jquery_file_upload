@@ -1,0 +1,26 @@
+<div id="list">
+  <h1>Listing pictures</h1>
+
+  <table id="pictures">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>File</th>
+      <th></th>
+    </tr>
+
+  <% @pictures.each do |picture| %>
+    <tr>
+      <td><%= best_in_place picture, :title, :type => :input %></td>
+      <td><%= best_in_place picture, :description, :type => :textarea %></td>
+      <td><%= picture.temporary_filename %></td>
+      <td><%= link_to 'Destroy', user_picture_path(current_user, picture), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+  
+  <%= link_to "Upload images", upload_user_pictures_path(current_user), :confirm => 'Are you sure you want to upload?', :method => :get, :remote => true %>
+
+</div>

@@ -1,0 +1,9 @@
+<ul>
+<% @pictures.each do |picture| %>
+ <% if picture.file? %>
+    <li><%= image_tag(picture.file.url(:medium)) %></li>
+  <% elsif %>
+    <li><%= image_tag("spinner3-black.gif", :class => "image_placeholder") %></li>
+ <% end %>
+<% end %>
+</ul>
