@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/cover/delayed_job_admin.git
+  revision: cdf38d302ffe2e604d26618551193e915d952c08
+  specs:
+    delayed_job_admin (1.0.2)
+      delayed_job
+      rails
+
+GIT
   remote: git://github.com/jnicklas/carrierwave.git
   revision: 5a1ba78b569e7274501362f726c41ee031eefcd5
   branch: remove_previous_files_2
@@ -37,6 +45,9 @@ GEM
       activesupport (= 3.0.4)
     activesupport (3.0.4)
     arel (2.0.9)
+    bcrypt-ruby (2.1.4)
+    best_in_place (0.1.9)
+      rails (~> 3.0.0)
     builder (2.1.2)
     carrierwave_backgrounder (0.0.2)
     client_side_validations (3.0.0)
@@ -45,6 +56,9 @@ GEM
     delayed_job (2.1.4)
       activesupport (~> 3.0)
       daemons
+    devise (1.1.7)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 1.0.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     excon (0.6.0)
@@ -100,17 +114,24 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.25)
+    warden (1.0.3)
+      rack (>= 1.0.0)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  best_in_place
   carrierwave!
   carrierwave_backgrounder
   client_side_validations (~> 3.0.0)
   delayed_job
+  delayed_job_admin!
+  devise
   fog
   jquery-rails (>= 0.2.6)
   mini_magick
   mysql2
   rails (= 3.0.4)
+  will_paginate (~> 3.0.pre2)

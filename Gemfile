@@ -8,8 +8,11 @@ gem 'fog'
 gem 'mini_magick'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'client_side_validations', '~> 3.0.0'
-
 gem 'delayed_job'
-gem 'carrierwave_backgrounder'
+gem 'carrierwave_backgrounder'#, :path => '/Users/yortz/projects/GEMS/carrierwave_backgrounder'
+gem "best_in_place"
+gem 'devise'
+gem 'delayed_job_admin', :git => 'git://github.com/cover/delayed_job_admin.git'
+gem "will_paginate", "~> 3.0.pre2"
 
 
