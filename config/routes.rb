@@ -1,6 +1,16 @@
 JqueryCarrierwave::Application.routes.draw do
+  devise_for :users
+
   resources :pictures
   root :to => 'pictures#index'
+  
+  resources :users do 
+    resources :pictures do
+      collection do
+        get 'upload', 'list'
+      end
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
