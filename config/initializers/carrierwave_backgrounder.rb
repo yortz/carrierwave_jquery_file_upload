@@ -1,4 +1,4 @@
-CarrierWave::Backgrounder::ORM::ClassMethods.module_eval do
+CarrierWave::Backgrounder::ORM::Base.module_eval do
   ##
   # #store_in_background  will process, version and store uploads in a background process.
   #
