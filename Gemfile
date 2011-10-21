@@ -5,6 +5,7 @@ gem 'mysql2'
 gem 'jquery-rails'
 gem 'nifty-generators'
 gem 'carrierwave'
+gem 'fog'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'
