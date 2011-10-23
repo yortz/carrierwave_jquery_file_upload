@@ -5,5 +5,8 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery-ui
+//= require jquery.iframe-transport
+//= require jquery.fileupload
+//= require jquery.fileupload-ui
 //= require_tree .

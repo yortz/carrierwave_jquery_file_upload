@@ -6,7 +6,7 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @pictures }
+      format.json { render :json => @pictures.collect { |p| p.to_jq_upload }.to_json }
     end
   end
 
@@ -44,11 +44,9 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.save
-        format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
-        format.json { render json: @picture, status: :created, location: @picture }
+       format.json { render :json => [ @picture.to_jq_upload ].to_json }
       else
-        format.html { render action: "new" }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
+        format.json { render :json => [ @picture.to_jq_upload.merge({ :error => "custom_failure" }) ].to_json }
       end
     end
   end
@@ -77,7 +75,7 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to pictures_url }
-      format.json { head :ok }
+      format.json { render :json => true }
     end
   end
 end
