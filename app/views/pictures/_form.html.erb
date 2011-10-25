@@ -9,6 +9,7 @@
         <%= f.label :title %><br />
         <%= f.text_field :title %>
       </div>
+      <br />
       <div class="field">
         <%= f.label :description %><br />
         <%= f.text_field :description %>
@@ -30,10 +31,5 @@
   </div>
 </div>
 
-<script id="template-upload" type="text/x-jquery-tmpl">
-  <%= render :partial => "template-upload" %>
-</script>
-
-<script id="template-download" type="text/x-jquery-tmpl">
-  <%= render :partial => "template-download" %>
-</script>
+<%= render :partial => "template-upload" %>
+<%= render :partial => "template-download" %>
