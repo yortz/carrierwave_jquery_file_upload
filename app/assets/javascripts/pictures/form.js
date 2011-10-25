@@ -16,7 +16,7 @@ $(function () {
   
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
-      maxNumberOfFiles: 3,
+      maxNumberOfFiles: 10,
       acceptFileTypes: /\.(jpg|jpeg|gif|png|JPG|JPEG|GIF|PNG)$/
     });
     
@@ -31,6 +31,8 @@ $(function () {
                 // Fix for IE7 and lower:
                 $(this).show();
             });
+            
+            $(".best_in_place").best_in_place();
     });
 
     // Open download dialogs via iframes,

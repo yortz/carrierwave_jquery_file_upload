@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/proton/best_in_place.git
+  revision: f101f00e20230c72ee681232b6440144d1ca2448
+  specs:
+    best_in_place (0.1.9)
+      rails (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -130,6 +137,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  best_in_place!
   carrierwave
   coffee-rails (~> 3.1.1)
   fog

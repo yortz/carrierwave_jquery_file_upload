@@ -6,6 +6,7 @@ class Picture < ActiveRecord::Base
   #one convenient method to pass jq_upload the necessary information
   def to_jq_upload
   {
+    "id" => read_attribute(:id),
     "title" => read_attribute(:title),
     "description" => read_attribute(:description),
     "name" => read_attribute(:file),

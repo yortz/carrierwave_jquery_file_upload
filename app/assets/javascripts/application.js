@@ -6,7 +6,10 @@
 //
 //= require jquery
 //= require jquery-ui
+//= require best_in_place
 //= require jquery.iframe-transport
 //= require jquery.fileupload
 //= require jquery.fileupload-ui
+//= require pictures/customupload
+//= require pictures/form
 //= require_tree .
