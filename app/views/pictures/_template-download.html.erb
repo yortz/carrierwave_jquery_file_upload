@@ -24,11 +24,11 @@
       {{else}}
           <td class="preview">
               {{if thumbnail_url}}
-                  <a href="${url}" target="_blank"><img src="${thumbnail_url}"></a>
+                  <a href="${url}" target="_blank" rel="shadowbox[gallery]" title="${title}"><img src="${thumbnail_url}"></a>
               {{/if}}
           </td>
           <td class="name">
-              <a href="${url}"{{if thumbnail_url}} target="_blank"{{/if}}>${name}</a>
+              <a href="${url}"{{if thumbnail_url}} target="_blank"{{/if}} rel="shadowbox" title="${title}">${name}</a>
           </td>
           <td class="size">${sizef}</td>
           <td colspan="2"></td>
