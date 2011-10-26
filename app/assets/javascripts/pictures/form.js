@@ -1,5 +1,7 @@
 $(function () {
 
+    $('.fileupload-content').append('<div id="loading"></div>');
+
     var inputs = $('#new_picture :input[type=text]');
     
     clearFields(inputs);
@@ -34,6 +36,7 @@ $(function () {
             
             $(".best_in_place").best_in_place();
             Shadowbox.init();
+            $('#loading').hide();
     });
 
     // Open download dialogs via iframes,
