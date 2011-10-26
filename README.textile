@@ -4,7 +4,7 @@ h2. V5:
 
 Sample app using Rails 3.1, "carrierwave":https://github.com/jnicklas/carrierwave and V5 of "jquery-file-upload":https://github.com/blueimp/jQuery-File-Upload to upload and store files on Amazon S3.
 
-h2. V4
+h2. V4:
 
 The old version of the app using Rails 3 and V4 of "jquery-file-upload":https://github.com/blueimp/jQuery-File-Upload can be found "here":https://github.com/yortz/carrierwave_jquery_file_upload/tree/v4
 
