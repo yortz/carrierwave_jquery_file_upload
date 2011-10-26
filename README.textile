@@ -1,0 +1,86 @@
+h1. Description:
+
+h2. V5:
+
+Sample app using Rails 3.1, "carrierwave":https://github.com/jnicklas/carrierwave and V5 of "jquery-file-upload":https://github.com/blueimp/jQuery-File-Upload to upload and store files on Amazon S3.
+
+h2. V4
+
+The old version of the app using Rails 3 and V4 of "jquery-file-upload":https://github.com/blueimp/jQuery-File-Upload can be found "here":https://github.com/yortz/carrierwave_jquery_file_upload/tree/v4
+
+The "backgrounder":https://github.com/yortz/carrierwave_jquery_file_upload/tree/backgrounder  branch delays the entire upload process to S3 thanks to "carrierwave backgrounder":https://github.com/lardawge/carrierwave_backgrounder and "delayed job":https://github.com/collectiveidea/delayed_job
+
+h1. Install:
+
+* Clone or fork the github repo
+* cd into app directory
+
+<pre>
+  <code>
+    $: bundle install       #install required gems
+    $: rake db:create:all   #create dbs
+    $: rake db:migrate      #migrate db
+    $: rails s              #start app
+  </code>
+</pre>
+
+h1. S3:
+
+Since this app stores files to amazon S3 you will need an "Amazon S3":http://aws.amazon.com/s3/ account, otherwise you can choose to store images on your local filesystem by editing the uploader:
+
+<pre>
+  <code>
+    #app/uploaders/image_uploader.rb
+    # Choose what kind of storage to use for this uploader:
+      storage :file     #stores files locally
+    # storage :fog      #stores files on S3
+  </code>
+</pre>
+
+Amazon S3 support is made possibile by "Fog":https://github.com/geemus/fog 
+
+You will need to tell carrierwave to use Amazons S3 by creating an initializer and providing your Amazon S3 authentication details:
+
+<pre>
+  <code>
+    #config/initializers/carrierwave.rb
+    
+    CarrierWave.configure do |config|
+      config.fog_credentials = {
+        :provider               => 'AWS',                                      # required
+        :aws_access_key_id      => 'amazon s3 access key',                     # required
+        :aws_secret_access_key  => 'amazon s3 secret access key',              # required
+        :region                 => 'us-west-1'                                 # optional, defaults to 'us-east-1'
+      }
+      config.fog_directory  = 'yourbucketname'                                 # required
+      config.fog_host       = 'http://yourbucketname.s3.amazonaws.com/'        # optional, defaults to nil
+      config.fog_public     = false                                            # optional, defaults to true
+      config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}           # optional, defaults to {}
+    end
+  </code>
+</pre>
+
+h1. Image Processing:
+
+MiniMagick is app default for processing images; if you want to use another library, just edit the Gemfile and modify the uploader to reflect your choice:
+
+<pre>
+  <code>
+    #app/uploaders/image_uploader.rb
+    # Include RMagick or ImageScience support:
+    # include CarrierWave::RMagick
+      include CarrierWave::ImageScience
+    # include CarrierWave::MiniMagick
+  </code>
+</pre>
+
+h1. References:
+
+* "carrierwave":https://github.com/jnicklas/carrierwave
+
+* "Jquery-File-Upload":https://github.com/blueimp/jQuery-File-Upload
+
+h1. TODO:
+
+* testing
+
